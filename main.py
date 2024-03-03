@@ -51,6 +51,7 @@ def send_message(chat_id, message, message_reply_id):
 
 
 def main():
+    send_message(chat_id, f"Выбрана неделя: {get_current_week_number()}", message_reply_id)
     schedule = get_me_schedule(get_current_week_number(), group)
     if schedule:
         days_schedule = schedule['response']['items']['lessons']
